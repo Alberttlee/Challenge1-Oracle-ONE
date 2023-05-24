@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@500&display=swap');
+
+* {
+    font-family: 'Rajdhani', sans-serif;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  
+}
+
+body {
+    background: #d4cfce;
+    display: grid;
+    min-height: 100vh;
+}
+
+header {
+    background: #770d01;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 10px;
+    box-shadow: 0 0 10px #770d01;
+}
+
+main {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    margin: 2em 0;
+    gap: 4em;
+
+}
+
+.input-conteiner {
+    display: inline-block;
+    width: 70%;
+    text-align: right;
+}
+
+.inputMessage {
+    width: 70%;
+    border: none;
+    border-radius: 10px;
+    padding: 1em;
+    resize: none;  /*quitamos la redimencionacion del text area*/
+    outline: none; /*quitamos el borde al usar el input*/
+    /*overflow: hidden;*/
+    height: 550px;
+}
+
+.text {
+    width: 70%;
+    display: inline-flex;
+    margin: 8px 0;
+}
+
+.buttons {
+    margin: 1em 0 0 0;
+}
+
+#btnEncrypter, #btnDesencrypter {
+    width: 30%;
+    padding: 1em;
+    margin: 1em 1em 0 1em;
+    cursor: pointer;
+    border-radius: 20px;
+    border: none;
+}
+
+.output-conteiner {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    align-content: center;
+    width: 30%;
+    background-color: lightgrey;
+    text-align: center;
+}
+
+.munieco {
+    width: 70%;
+    align-self: center;
+    padding: 2em 0;
+}
+
+.btnCopy {
+    
+    width: 50%;
+}
+
+footer {
+    background-color: rgb(146, 110, 175);
+    text-align: center;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact {
+    position: relative;
+    display: flex;
+    align-items: center;
+    left: 20%;
+}
+
+.github-logo {
+    position: relative;
+    left: 2em;
+}
+
+.ocultar {
+    display: none;
+}
+/*.btncopy {
+    display: none;
+}*/

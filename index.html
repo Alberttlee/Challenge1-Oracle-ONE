@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+    <body>
+        <header>
+            <div class="header">
+                <img  src="./img/Logo.svg" alt="Logo Alura Latam">
+                <h1>Encriptador de texto</h1>
+            </div>
+        </header>
+        <main>
+                <section class="input-conteiner">
+                    <textarea name="textfield" class="inputMessage" id="message" placeholder="Escribe tu texto aquí..." ></textarea>
+                    <p class="text"><img src="./img/exclamation.svg" alt="!">Solo letras minúsculas y sin acentos</p>
+                    <div class="buttons">
+                        <button id="btnEncrypter">Encriptar</button>
+                        <button id="btnDesencrypter">Desencriptar</button>
+                    </div>
+                </section>
+                
+                <section class="output-conteiner">
+                    <p id="mesageOut"></p>
+                    <img class="munieco" src="./img/Muñeco.svg" alt="Imagen de espera">
+                    <h2 id="h2Out">Ningún mensaje fue encontrado</h2>
+                    <p class="outputMessage" id="parrafoOut">Ingresa el texto que desees encriptar o desencriptar</p>
+                    <button class="btnCopy">Copiar</button>
+                </section>          
+        </main>
+        <footer>
+            <p> &#169; 2023 Alberto Estrada</p>
+            <p class="contact"> Contacto <img class="github-logo" src="./img/github.svg" alt="Logo Github"></p>
+        </footer>
+        <script src="./js/script.js"></script>
+    </body>
+</html>
