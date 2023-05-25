@@ -1,47 +1,58 @@
-/* Configure un elemento <div> para que no se muestre:
-
-document.getElementById("oculto").style.display = "none";
-
-*/
-
 let btnEncrypter = document.getElementById("btnEncrypter");
 let btnDesencrypter = document.getElementById("btnDesencrypter");
+let btnCopy = document.getElementById("btnCopy");
 let munieco = document.querySelector(".munieco");
 let h2 = document.getElementById("h2Out")
 let parrafo = document.getElementById("parrafoOut");
+let msjOut = document.getElementById("mesageOut");
+const simbolos = /[A-Z~!@#$%^&*()_+|}{[\]\\\/?=><:"`;.,áéíóúàèìòù'1-9]/g;
 
-
-btnEncrypter.onclick = replaceText;
+btnEncrypter.onclick = changeText;
 btnDesencrypter.onclick = revertText;
+btnCopy.onclick = copyText;
 
-function replaceText() {
+/*Funcion para obtener el texto de entrada del textarea*/
+function saveText() {
+    let msgInp = document.getElementById("message").value;
+     return msgInp;
+ }
+/*Ejecuta el encriptado */
+function changeText() {
     hiddenElements();
-    let msjOut = document.getElementById("mesageOut");
     msjOut.textContent = encrypterText(saveText()); 
     
 }
-
+/*Ejecuta el desencriptado*/
 function revertText() {
-    hiddenElements();
-    let msjOut = document.getElementById("mesageOut");
+    hiddenElements(); 
     msjOut.textContent = desencrypterText(saveText()); 
 }
-
-function saveText() {
-    let msgInp = document.getElementById("message").value;
-    return msgInp;
-}
-
+/*Ocultar elementos*/
 function hiddenElements() {
     munieco.classList.add("ocultar");
     h2.classList.add("ocultar");
     parrafo.classList.add("ocultar");
 }
+/*Mostrar elementos*/
+function showElements(){
+    munieco.classList.remove("ocultar");
+    h2.classList.remove("ocultar");
+    parrafo.classList.remove("ocultar"); 
+}
 
+/*Funcion para encriptar*/
 function encrypterText(mensaje){
     let text = mensaje;
     let finalText = "";
-
+    if(text === ""){
+        alert("Por favor ingresa un texto Guap@");  
+        showElements(); 
+    }
+    else if (text.match(simbolos) != null){
+        alert("Solo letras minúsculas y sin acentos");
+        showElements();
+        return;
+    }
     for(let i = 0; i < text.length; i++) {
         if(text[i] == "a"){
             finalText = finalText + "ai";
@@ -64,11 +75,19 @@ function encrypterText(mensaje){
     }
     return finalText;
 }
-
+/*Funcion para desencriptar*/
 function desencrypterText(mensaje){
     let text = mensaje;
     let finalText = "";
-
+    if(text === ""){
+        alert("Por favor ingresa un texto Guap@");
+        showElements();   
+    }
+    else if (text.match(simbolos) != null){
+        alert("Solo letras minúsculas y sin acentos");
+        showElements();
+        return;
+    }
     for(let i = 0; i < text.length; i++) {
         if(text[i] == "a"){
             finalText = finalText + "a";
@@ -96,23 +115,13 @@ function desencrypterText(mensaje){
     }
     return finalText;
 }
+/*Funcion para copiar texto con el boton*/
+function copyText() {
+    let parrafoCopy = document.getElementById("mesageOut"); /*obtenemos el elemento de párrafo deseado*/
+    let contenido = parrafoCopy.innerHTML; /*obtenemos el contenido del elemento de párrafo*/
+    
+    navigator.clipboard.writeText(contenido); /*copiamos el contenido al portapapeles*/
+    parrafoCopy.textContent = ""; /*limpiamos el contenido del elemento de párrafo*/
 
+}
 
-
-
-
-
-// let msjOut = document.getElementById("messageOut");
-// let matrizCodigo = [
-//     ["e", "enter"],
-//     ["i", "imes"],
-//     ["a", "ai"],
-//     ["o", "ober"],
-//     ["u", "ufat"],
-//   ];
-// function encrypter() {
-//     let textInp = msjInp.value;
-//     let textEncrypter = "";
-//     if (textInp != "")
-        
-// }
