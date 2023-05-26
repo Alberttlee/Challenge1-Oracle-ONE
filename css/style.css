@@ -254,7 +254,24 @@ li {
     }
 
 } 
+ .swal-modal {
+    background-color: rgba(143, 52, 52, 0.69);
+    border: 3px solid #ffffd2;
+    border-radius: 20px;
+  }
 
+  .swal-button {
+    border-radius: 10px;
+    padding: 10px 50px;
+    background-color: #241c0b;
+    font-size: 12px;
+    border: 1px solid #d1acac;
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.3);
+  }
 
-
+  .swal-text {
+    display: block;
+    text-align: center;
+    font-size: 20px;
+  }
 

@@ -44,11 +44,17 @@ function encrypterText(mensaje){
     let text = mensaje;
     let finalText = "";
     if(text === ""){
-        alert("Por favor ingresa un texto Guap@");  
+        swal({
+            text: "Por favor ingresa un texto Guap@",
+            icon: "info",
+        });
         showElements(); 
     }
     else if (text.match(simbolos) != null){
-        alert("Solo letras minúsculas y sin acentos");
+        swal({
+            text: "Solo letras minúsculas y sin acentos",
+            icon: "error",
+        });
         showElements();
         return;
     }
@@ -79,11 +85,17 @@ function desencrypterText(mensaje){
     let text = mensaje;
     let finalText = "";
     if(text === ""){
-        alert("Por favor ingresa un texto Guap@");
+        swal({
+            text: "Por favor ingresa un texto Guap@",
+            icon: "info",
+        });
         showElements();   
     }
     else if (text.match(simbolos) != null){
-        alert("Solo letras minúsculas y sin acentos");
+        swal({
+            text: "Solo letras minúsculas y sin acentos",
+            icon: "error",
+        });
         showElements();
         return;
     }
@@ -118,8 +130,7 @@ function desencrypterText(mensaje){
 function copyText() {
     let parrafoCopy = document.getElementById("mesageOut"); /*obtenemos el elemento de párrafo deseado*/
     let contenido = parrafoCopy.innerHTML; /*obtenemos el contenido del elemento de párrafo*/
-    
     navigator.clipboard.writeText(contenido); /*copiamos el contenido al portapapeles*/
-    parrafoCopy.textContent = ""; /*limpiamos el contenido del elemento de párrafo*/
 
+    parrafoCopy.textContent = ""; /*limpiamos el contenido del elemento de párrafo*/
 }
