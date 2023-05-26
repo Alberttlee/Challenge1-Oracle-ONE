@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Viga&display=swap');
 
 * {
-    font-family: 'Rajdhani', sans-serif;
+    font-family: 'Viga', sans-serif;
     box-sizing: border-box;
     padding: 0;
     margin: 0;
@@ -9,13 +9,14 @@
 }
 
 body {
-    background: #d4cfce;
+    background: linear-gradient(201deg, #cd6565, #6e2020);
     display: grid;
     min-height: 100vh;
 }
 
 header {
-    background: #770d01;
+    background: linear-gradient(45deg, #ffffd2, transparent);
+    box-shadow: 0px 0px 50px 1px #000000;
 }
 
 .header {
@@ -32,13 +33,13 @@ main {
     justify-content: center;
     margin: 2em 0;
     gap: 4em;
-
+    height: 90%;
 }
 
 .input-conteiner {
-    display: inline-block;
-    width: 70%;
-    text-align: right;
+    display: grid;
+    width: 80%;
+    justify-items: end;
 }
 
 .inputMessage {
@@ -48,76 +49,157 @@ main {
     padding: 1em;
     resize: none;  /*quitamos la redimencionacion del text area*/
     outline: none; /*quitamos el borde al usar el input*/
-    /*overflow: hidden;*/
     height: 550px;
+    margin: 3em 0 0;
+    font-size: 1.5em;
+    background: linear-gradient(198deg, #b78b8b, #761e1e);
 }
 
 .text {
     width: 70%;
     display: inline-flex;
     margin: 8px 0;
+    color: #f7a8a8;
 }
 
 .buttons {
-    margin: 1em 0 0 0;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
 }
 
 #btnEncrypter, #btnDesencrypter {
     width: 30%;
-    padding: 1em;
-    margin: 1em 1em 0 1em;
-    cursor: pointer;
+    padding: 20px;
+    margin: 1em 1.5em 0;
     border-radius: 20px;
-    border: none;
+    border: 1.5px solid #0a0a0a;
+    cursor: pointer;
+    font-size: 1.2em;
+    background: linear-gradient(to bottom, #c27078 5%, #580b0b 100%);
+    text-shadow: -1px 2px 32px #5c0000;
+    font-family: cursive;
+    color: #ffffff;
+    box-shadow: -1px 6px 13px 1px #000000;
+}
+
+.myButton:hover {
+    opacity: .7;
+}
+
+.myButton:active {
+	position:relative;
+	top:10px;
 }
 
 .output-conteiner {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    align-content: center;
+    display: grid;
     width: 30%;
-    background-color: lightgrey;
     text-align: center;
+    padding: 0 3em;
+    border-radius: 20px;
+    background: linear-gradient(201deg, #cd6565, #6e2020);
+    box-shadow: 10px 13px 18px #4e0505;
+    
+}
+
+.parrafoConteiner {
+    margin: 1.5em 0 0;
+    height: 0;
+}
+
+#mesageOut {
+    padding: 3em 0 0;
+    overflow: overlay;
+    word-break: break-word;
+    height: 500px;
+    font-size: 1.2em;
+    color: rgb(255, 255, 255);
 }
 
 .munieco {
-    width: 70%;
+    width: 90%;
     align-self: center;
+    place-self: center;
     padding: 2em 0;
 }
 
-.btnCopy {
-    
-    width: 50%;
+.containerCopy{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+#btnCopy {
+    padding: 20px;
+    margin: 1em 1em 0;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    width: 60%;
+    font-size: 1.2em;
+    background: linear-gradient(to bottom, #c27078 5%, #580b0b 100%);
+    text-shadow: -1px 2px 32px #5c0000;
+    font-family: cursive;
+    color: #ffffff;
+    box-shadow: -1px 6px 13px 1px #000000;
 }
 
 footer {
-    background-color: rgb(146, 110, 175);
+    background: linear-gradient(62deg, #f0a581, transparent);
     text-align: center;
     padding: 15px;
+    display: inline-flex;
+    align-items: center;
+    width: 100%;
+    color: #ffffff;
+}
+
+.copyright {
+    width: 80%;
+    text-align: center;
+    font-size: 1.2em;
+    text-transform: uppercase;
+}
+
+.contactList {
     display: flex;
     justify-content: center;
-    align-items: center;
+    text-transform: uppercase;
+    width: 20%;
 }
 
 .contact {
     position: relative;
     display: flex;
     align-items: center;
-    left: 20%;
+    font-size: 1.2em;
+    text-transform: uppercase;
 }
 
-.github-logo {
-    position: relative;
-    left: 2em;
+li {
+    list-style: none;
 }
 
 .ocultar {
     display: none;
 }
 
+.mostrar {
+    display: auto;
+}
+
+.github-logo {
+    transition: transform 0.2s ease;
+}
+
+.github-logo:hover {
+    transform: scale(1.5);
+}
+
+::placeholder {
+    color: #f0a581;
+}
 
 /*.btncopy {
     display: none;

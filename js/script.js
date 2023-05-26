@@ -39,7 +39,6 @@ function showElements(){
     h2.classList.remove("ocultar");
     parrafo.classList.remove("ocultar"); 
 }
-
 /*Funcion para encriptar*/
 function encrypterText(mensaje){
     let text = mensaje;
@@ -124,4 +123,3 @@ function copyText() {
     parrafoCopy.textContent = ""; /*limpiamos el contenido del elemento de párrafo*/
 
 }
-

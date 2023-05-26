@@ -19,22 +19,33 @@
                     <textarea name="textfield" class="inputMessage" id="message" placeholder="Escribe tu texto aquí..." ></textarea>
                     <p class="text"><img src="./img/exclamation.svg" alt="!">Solo letras minúsculas y sin acentos</p>
                     <div class="buttons">
-                        <button id="btnEncrypter">Encriptar</button>
-                        <button id="btnDesencrypter">Desencriptar</button>
+                        <button class="myButton" id="btnEncrypter">Encriptar</button>
+                        <button class="myButton" id="btnDesencrypter">Desencriptar</button>
                     </div>
                 </section>
                 
                 <section class="output-conteiner">
-                    <p id="mesageOut"></p>
-                    <img class="munieco" src="./img/Muñeco.svg" alt="Imagen de espera">
+                    <div class="parrafoConteiner">
+                        <p id="mesageOut"></p>
+                    </div>
+                    <img class="munieco" src="./img/Muñeco.png" alt="Imagen de espera">
                     <h2 id="h2Out">Ningún mensaje fue encontrado</h2>
                     <p class="outputMessage" id="parrafoOut">Ingresa el texto que desees encriptar o desencriptar</p>
-                    <button class="btnCopy" id="btnCopy">Copiar</button>
+                    <div class="containerCopy">
+                        <button class="myButton" id="btnCopy">Copiar</button>
+                    </div>
                 </section>          
         </main>
         <footer>
-            <p> &#169; 2023 Alberto Estrada</p>
-            <p class="contact"> Contacto <img class="github-logo" src="./img/github.svg" alt="Logo Github"></p>
+            <p class="copyright"> &#169; 2023 Alberto Estrada</p>
+            <div class="contactList">
+                <p class="contact"> Contacto </p>
+                <nav>
+                    <ul>
+                        <li><a href="https://github.com/Alberttlee" target="_blank"><img class="github-logo" src="./img/github.svg"  alt="Logo Github"></a></li>
+                    <ul>
+                </nav>
+            </div>
         </footer>
         <script src="./js/script.js"></script>
     </body>
